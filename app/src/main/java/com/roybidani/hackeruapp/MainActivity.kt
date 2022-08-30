@@ -19,8 +19,14 @@ class MainActivity : AppCompatActivity() {
 
     fun onButtonClick(view: View){
         val someTextView:TextView = findViewById<TextView>(R.id.someTextView)
-        someTextView.text = "Hello ${getName()}"
+        val editTextCon = getEditText()
+        someTextView.text = "Hello ${editTextCon}!"
         getName()
+    }
+
+    fun getEditText(): String{
+        val editText: TextView = findViewById<TextView>(R.id.editText)
+        return editText.text.toString()
     }
 
 
